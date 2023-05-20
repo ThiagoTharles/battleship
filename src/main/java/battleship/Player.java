@@ -37,7 +37,7 @@ public class Player {
     }
 
     public void printBoard() {
-        System.out.println("\0123456789");
+        System.out.println("-0123456789");
         for (int i = 0; i < 10; i++) {
             System.out.print(i);
             for (int j = 0; j < 10; j++) {
@@ -51,7 +51,7 @@ public class Player {
         if (rival.getGrid()[x][y] == 1) {
             board[x][y] = 'X';
         }else{
-            board[x][y] = 'A';
+            board[x][y] = '~';
         }
         printBoard();
     }

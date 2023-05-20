@@ -51,4 +51,4 @@ public class Rival {
     public void setShip(int x, int y) {
         grid[x][y] = 1;
     }
-} // end class Rival
+}
