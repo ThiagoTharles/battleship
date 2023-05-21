@@ -1,5 +1,6 @@
-# battleship
+# Battleship
 a implementation of battleship boardgame in java with test
+### Equipe: Gabriel Correia, Mônica Yasmin e Thiago Tharles
 
 # BDD 
 ## Funcionalidade: PrintBoard
