@@ -25,7 +25,6 @@ public class Player {
         board = new char[10][10];
         rival = new Rival();
         clearBoard();
-        printBoard();
     }
 
     public void clearBoard() {
@@ -48,12 +47,20 @@ public class Player {
     }
 
     public void predict(int x, int y) {
-        if (rival.getGrid()[x][y] == 1) {
-            board[x][y] = 'X';
+        if ((x<10)||(y<10)) {
+            if (board[x][y] != '-') {
+                System.out.println("You already shot there!");
+            } else if (rival.getGrid()[x][y] == 1) {
+                board[x][y] = 'X';
+                System.out.println("You hit a ship!");
+            }else{
+                board[x][y] = '~';
+                System.out.println("You missed!");
+            }
+            printBoard();
         }else{
-            board[x][y] = '~';
-        }
-        printBoard();
+            System.out.println("Invalid coordinates");}
+        
     }
 
 

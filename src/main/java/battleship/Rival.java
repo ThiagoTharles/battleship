@@ -35,13 +35,24 @@ public class Rival {
     }
 
     public void setShip(int size, int x, int y, String orientation) {
-        if (orientation.equals("horizontal")) {
-            for (int i = 0; i < size; i++) {
-                grid[x][y+i] = 1;
+        if(size>5 || size<1 || x>10 || y>10){
+            System.out.println("Invalid Parameters");
+        }
+        else if (orientation.equals("horizontal")) {
+            if (y+size>10) {
+                System.out.println("Invalid Parameters");
+            }else{
+                for (int i = 0; i < size; i++) {
+                    grid[x][y+i] = 1;
+                }
             }
         }else if (orientation.equals("vertical")){
-            for (int i = 0; i < size; i++) {
-                grid[x+i][y] = 1;
+            if (x+size>10) {
+                System.out.println("Invalid Parameters");
+            }else{
+                for (int i = 0; i < size; i++) {
+                    grid[x+i][y] = 1;
+                }
             }
         }else{
             System.out.println("Invalid orientation");
